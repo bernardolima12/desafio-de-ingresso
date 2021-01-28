@@ -9,3 +9,7 @@ Os valores para os atributos desse exercício precisam estar dentro de um certo 
 
 Por último, no arquivo denominado extra, foi proposto uma maneira simples de deixar a API um pouco mais segura. Para isso, foi criado um usuário e uma senha que devem ser preenchidos por quem acessa a plataforma. Nesse caso, o usuário é admin e a senha datamachina - gerados a partir de um dicionário denominado USER_DATA.
 Após o preenchimento desses campos, o cliente deve escolher dentre os dois botões oferecidos. Dependendo da sua escolha, ele será redirecionado para a página do Ex1, caso escolha Fibonacci, ou do Ex2, caso escolha serviços.
+
+Ex2(items): A chamada da API pode ser feita utilizando, por exemplo, o Postman. Na aba body digite uma lista de dicionários no formato [{"peso":,"x":,"y":,"z":},...], onde x,y,z indicam a largura, espessura e altura do item.
+A função pack_products_into_restrictions utilizada recebe a lista de dicionários citada anteriormente e as dimensões máximas do container e retorna as dimensões mínimas necessárias para agruparmos todas as caixas. Caso as dimensões mínimas excedam as dimensões máximas a função retorna None.
+No caso específico do problema, utilizamos as dimensões máximas de cada veículos e verificamos se a função retorna None. Caso retorne, excluimos a possbilidade de utilizarmos o veículo. Fazemos isso para cada veículo (chave no dicionário) que não tenha sido excluído devido as restrições de peso.
